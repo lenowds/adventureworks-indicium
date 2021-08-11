@@ -1,0 +1,47 @@
+version: 2
+
+models:
+    - name: dim_customer
+      description: "Esta é a tabela de dimensão clientes"
+      columns:
+          - name: sk_customerid
+            description: "A chave surrogate da dimensão cliente"
+            tests:
+                - unique
+                - not_null
+    
+    - name: dim_product
+      description: "Essa é a tabela de dimensão produtos"
+      columns:
+          - name: sk_productid
+            description: "Chave surrogate da dimensão fornecedores"
+            tests:
+                - unique
+                - not_null
+
+    - name: dim_creditcard
+      description: "Essa é a tabela de dimensão cartão de crédito"
+      columns:
+          - name: sk_creditcardid
+            description: "Chave surrogate da dimensão cartão de crédito"
+            tests:
+                - unique
+                - not_null
+
+    - name: dim_shipp
+      description: "Essa é a tabela de dimensão entrega dos pedidos"
+      columns:
+          - name: sk_shipp
+            description: "Chave surrogate da dimensão entrega"
+            tests:
+                - unique
+                - not_null
+
+    - name: fact_order
+      description: "Esta é a tabela de fato pedidos. A granularidade dessa tabela são os detalhes do pedido."
+      columns:
+          - name: salesorderdetailid
+            description: "A chave primária natural da fato pedido"
+            tests:
+                - unique
+                - not_null

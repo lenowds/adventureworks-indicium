@@ -1,0 +1,140 @@
+version: 2
+
+sources:
+  - name: indiciumdesafiofinal
+    description: It,s data source our of ERP after extract and load processing. 
+    tables:
+      - name: address
+        description: >
+          It's address entity.
+        columns:
+          - name: addressid
+            description: Primary key
+            tests:
+              - unique
+              - not_null
+          - name: modifieddate
+            description: Note that the status can change over time
+      
+      - name: countryregion
+        description: >
+          It's region country entity.
+        columns:
+          - name: countryregioncode
+            description: Primary key
+            tests:
+              - unique
+              - not_null
+          - name: modifieddate
+            description: Note that the status can change over time
+            
+      - name: creditcard
+        description: >
+          It's credit card entity.
+        columns:
+          - name: creditcardid
+            description: Primary key
+            tests:
+              - unique
+              - not_null
+          - name: modifieddate
+            description: Note that the status can change over time
+
+      - name: customer
+        description: >
+          It's customers entity.
+        columns:
+          - name: customerid
+            description: Primary key
+            tests:
+              - unique
+              - not_null
+          - name: modifieddate
+            description: Note that the status can change over time
+
+      - name: person
+        description: >
+          It's person entity.
+        columns:
+          - name: businessentityid
+            description: Primary key
+            tests:
+              - unique
+              - not_null
+          - name: modifieddate
+            description: Note that the status can change over time
+
+      - name: product
+        description: >
+          It's product entity.
+        columns:
+          - name: productid
+            description: Primary key
+            tests:
+              - unique
+              - not_null
+          - name: modifieddate
+            description: Note that the status can change over time
+
+      - name: salesorderdetail
+        description: >
+          It's details order entity.
+        columns:
+          - name: salesorderdetailid
+            description: Primary key
+            tests:
+              - unique
+              - not_null
+          - name: modifieddate
+            description: Note that the status can change over time
+
+      - name: salesorderheader
+        description: >
+          It's order entity.
+        columns:
+          - name: salesorderid
+            description: Primary key
+            tests:
+              - unique
+              - not_null
+          - name: modifieddate
+            description: Note that the status can change over time
+
+      - name: salesorderheadersalesreason
+        description: >
+          It's reason sales entity.
+        columns:
+          - name: salesorderid
+            description: Primary key
+            tests:
+              - not_null
+          - name: salesreasonid
+            description: Primary key
+            tests:
+              - not_null
+          - name: modifieddate
+            description: Note that the status can change over time
+
+      - name: salesreason
+        description: >
+          It's reason sales entity.
+        columns:
+          - name: salesreasonid
+            description: Primary key
+            tests:
+              - unique
+              - not_null
+          - name: modifieddate
+            description: Note that the status can change over time
+
+      - name: stateprovince
+        description: >
+          It's state entity.
+        columns:
+          - name: stateprovinceid
+            description: Primary key
+            tests:
+              - unique
+              - not_null
+          - name: modifieddate
+            description: Note that the status can change over time
