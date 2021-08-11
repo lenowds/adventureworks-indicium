@@ -25,7 +25,7 @@ with oderdetail as (
   ),
   detail as (
     select
-      oderdetail.salesorderid,
+      oderdetail.salesorderid as orderid,
       person.firstname,
       person.middlename,
       person.lastname,
